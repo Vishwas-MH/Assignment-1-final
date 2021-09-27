@@ -237,7 +237,7 @@ aside{
 
 .main_header_text{
     color: #ea168b;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: 2px;
     padding: 0.8rem 0 0.2rem 0rem;
@@ -252,7 +252,7 @@ aside{
 
 .recommended_nav_bar {
     color: #676767;
-    font-size: 0.77rem;
+    font-size: 0.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -310,12 +310,12 @@ aside{
   }
   
   .group_name {
-    font-size: 0.89rem;
+    font-size: 0.85rem;
     font-weight: 600;
   }
   
   .owner_name{
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: #4a4a4a;
   }
   
@@ -340,9 +340,9 @@ aside{
     padding: 1rem;
     background-color: #ffffff;
     border-radius: 5px;
-    height: 67vh;
+    height: 63vh;
   }
-  
+
   .table_top {
     display: flex;
     align-content: center;
@@ -353,7 +353,7 @@ aside{
   .title_all_groups{
     color: #ea168b;
     font-weight: bold;
-    font-size: 1rem;;
+    font-size: 0.9rem;;
     text-align: left;
     display: flex;
     align-items: center;
@@ -370,7 +370,6 @@ aside{
     position: absolute;
     opacity: 0.5;
     padding: 0.4rem;
-    height: 1rem;
   }
   
   ::placeholder {
@@ -386,7 +385,7 @@ aside{
     height: 2.3rem;
     width: 14rem;
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 0.76rem;
     border: solid 1px #dee3e6;
     margin-right: 0.6rem;
     padding-left: 2rem;
@@ -404,7 +403,7 @@ aside{
     border-radius: 5px;
     height: 2rem;
     width: 7rem;
-    font-size: 0.8rem;
+    font-size: 0.83rem;
     border: solid 1px #e20074;
   }
   
@@ -414,20 +413,20 @@ aside{
     transition: ease 0.2s;
   }
 
-  .footer {
+.footer {
     color: #676767;
     font-size: 0.8rem;
     display: flex;
     justify-content: end;
     align-items: center;
     margin: 0.8rem;
-  }
+}
 
-  table {
+table {
     border-collapse: collapse;
     width: 100%;
     color: #4a4a4a;
-    height: 30vh;
+    height: 20rem;
   }
   
   .table-header-row, .table-body-row {
@@ -439,11 +438,11 @@ aside{
   
   
   thead, tr, .checkbox {
-    background-color: #f8fafb;
+    background-color: #f8fafb;;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 0.5px;
     text-align: left;
     color: solid black;
-    font-size: 0.7rem;
   }
   
   .checkbox{
@@ -464,11 +463,12 @@ aside{
   th {
     font-weight: bold;
     font-size: 1rem;
+    letter-spacing: 0.5px;
   }
   
   th,td {
-    padding: 0.5rem 0;
-    font-size: 0.84rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
   }
   
   tbody,tr {
@@ -489,7 +489,7 @@ aside{
   
   tbody {
     display: block;
-    height: 45vh;
+    height: 20rem;
     overflow: scroll;
     border-bottom: solid 1px #e8e9eb;
     border-top: solid 1px #e8e9eb;
@@ -511,6 +511,7 @@ aside{
     color: #e20074;
     padding-left: 0.4rem;
     padding-right: 0.2rem;
+    font-size:0.72rem;
     text-decoration: underline;
   }
   
@@ -519,13 +520,14 @@ aside{
     align-items: center;
     padding-top: 2px;
     text-decoration: underline;
+    font-size: 0.72rem;
   }
   
   .joinBtn {
     color: #e20074;
     height: 1.6rem;
     width: 5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border-radius: 3px;
     border: solid 1px #ea168b;
     background-color: #fff;
@@ -550,6 +552,23 @@ aside{
   }
   
   .group-actions {
-    padding-right: 1rem;
-    text-align: right;
+    padding-left: 8rem;
+    text-align: center;
   }
+
+  .group-create-date{
+      font-size: 0.72rem;
+  }
+  
+  .footer {
+    font-size: 0.6rem;
+    text-align: left;
+    color: #676767;
+    font-size: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
