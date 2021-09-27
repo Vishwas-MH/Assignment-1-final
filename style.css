@@ -340,7 +340,7 @@ aside{
     padding: 1rem;
     background-color: #ffffff;
     border-radius: 5px;
-    height: 70vh;
+    height: 67vh;
   }
   
   .table_top {
@@ -427,6 +427,7 @@ aside{
     border-collapse: collapse;
     width: 100%;
     color: #4a4a4a;
+    height: 30vh;
   }
   
   .table-header-row, .table-body-row {
@@ -438,11 +439,11 @@ aside{
   
   
   thead, tr, .checkbox {
-    background-color: #f8fafb;;
-    font-family: "Roboto", sans-serif;
+    background-color: #f8fafb;
     letter-spacing: 0.5px;
     text-align: left;
     color: solid black;
+    font-size: 0.7rem;
   }
   
   .checkbox{
@@ -467,7 +468,7 @@ aside{
   
   th,td {
     padding: 0.5rem 0;
-    font-size: 1rem;
+    font-size: 0.84rem;
   }
   
   tbody,tr {
@@ -488,7 +489,7 @@ aside{
   
   tbody {
     display: block;
-    height: 30rem;
+    height: 45vh;
     overflow: scroll;
     border-bottom: solid 1px #e8e9eb;
     border-top: solid 1px #e8e9eb;
