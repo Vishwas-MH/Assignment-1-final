@@ -62,17 +62,18 @@ header{
 
 .header_right_text{
     color: #252a31;
-    padding-top: 3px;
+    
 }
 
 .name{
-    font-size: 1rem; 
+    font-size: 1.05rem;
 }
 
 .company{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     opacity: 50%;
     text-align: right;
+    font-weight: bold;
 }
 
 .profile{
@@ -94,7 +95,7 @@ aside{
 }
 
 .aside_top{
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .your_groups{
@@ -202,7 +203,8 @@ aside{
 .groups_packs {
     display: flex;
     align-items: center;
-    padding: 1rem 0 1rem 0.8rem;
+    width: 100%;
+    padding: 1rem;
     /*top right bottom left, or, top+bottom, left+right*/
 }
 
@@ -280,12 +282,12 @@ aside{
   
   .recommended_group{
     display: flex;
-    height: 3.4rem;
+    height: 4rem;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
     background-color: #fff;
-    width: 14rem;
+    width: 16rem;
     margin-right: 0.5rem;
     /*margin-right: 0.5rem;
     width: 12rem;*/
@@ -300,10 +302,10 @@ aside{
   
   .group_name,.owner_name {
     white-space: nowrap;
-    width: 9rem;
+    width: 9.5rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0.25rem;
+    padding: 0.2rem;
     /*ellipsis gives the 3 dots*/
   }
   
@@ -313,14 +315,14 @@ aside{
   }
   
   .owner_name{
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: #4a4a4a;
   }
   
   .group_image {
     /*color: #e20074;*/
     margin: 0 0.5rem;
-    height: 1.8rem;
+    height: 1.9rem;
   }
   
   .plus_icon{
@@ -351,10 +353,11 @@ aside{
   .title_all_groups{
     color: #ea168b;
     font-weight: bold;
-    font-size: 0.9rem;;
+    font-size: 1rem;;
     text-align: left;
     display: flex;
     align-items: center;
+    letter-spacing: 1px;
   }
   
   .table_top_right {
@@ -366,20 +369,22 @@ aside{
   .bx {
     position: absolute;
     opacity: 0.5;
-    padding-left: 0.2rem;
+    padding: 0.4rem;
+    height: 1rem;
   }
   
   ::placeholder {
     color: #4a4a4a;
     opacity: 0.5;
     font-family: Arial, FontAwesome;
+    font-size: 0.9rem;
   }
   
   .search-group {
     background-color: #fff;
     border-radius: 5px;
-    height: 1.9rem;
-    width: 13rem;
+    height: 2.3rem;
+    width: 14rem;
     text-align: left;
     font-size: 0.8rem;
     border: solid 1px #dee3e6;
