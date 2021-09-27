@@ -3,7 +3,6 @@
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 105%;
     background: transparent;
     box-sizing: border-box;
     text-decoration: none;
@@ -12,6 +11,7 @@
 html, body {
     height: 100vh;
     font-family: Roboto, sans-serif;
+    font-size: 14px;
     overflow: hidden;
     /*prevents scroll*/
     /*give viewport height to make it occupy full screen*/
@@ -32,6 +32,7 @@ header{
 .header_left{
     display: flex;
     align-items: center;
+    letter-spacing: 0.5px;
 }
 
 .cloud_image{
@@ -88,15 +89,12 @@ aside{
     width: 18%;
     background-color: #ffff;
     box-shadow: 0 1px 4px 0 #dfe3e7;
+    letter-spacing: 0.5px;
     /*padding: 2%;*/
 }
 
 .aside_top{
-    padding: 6%;
-}
-
-.aside_bottom{
-    padding: 1%;
+    padding: 1rem;
 }
 
 .your_groups{
@@ -121,7 +119,7 @@ aside{
 .partition_line {
     max-width: 280px;
     height: 1px;
-    margin: 2%;
+    margin: 1.5rem 0;
     border: solid 1px #f2f4f8;
 }
 
@@ -131,6 +129,14 @@ aside{
     justify-content: center;
     align-items: flex-start;
     padding: 1rem 0 1rem 0rem;
+    font-weight: 600;
+}
+
+.your_requests_text{
+    color: #ea168b;
+    font-size: 0.87rem;
+    font-weight: bold;
+    padding: 0 0 1rem 0rem;
 }
   
 .request {
@@ -203,7 +209,7 @@ aside{
 .side_type {
     font-size: 0.85rem;
     color: #46475c;
-    font-weight: 550;
+    font-weight: 600;
     text-align: center;
     height: 0.91rem;
 }
@@ -231,12 +237,14 @@ aside{
     color: #ea168b;
     font-size: 1rem;
     font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.8rem 0 0.2rem 0rem;
 }
 
 .partition_line_big{
-    max-width: 2140px;
+    width: 100%;
     height: 2px;
-    margin: 1% 0%;
+    margin: 1rem 0%;
     border: solid 1px #e9e9e9;
 }
 
@@ -250,12 +258,14 @@ aside{
 
 .recommended_nav_bar_text{
     font-weight: 550;
+    padding: 0.5rem 0 0.6rem 0;
+    letter-spacing: 1.67px;
 }
 
 .recommended_panel {
     display: flex;
     overflow-x: scroll;
-    margin: 0.5% 0%;
+    margin: 0.85rem 0;
     /*justify-content: flex-start;
     align-items: center;
     background-color: #f2f4f8;
@@ -275,7 +285,8 @@ aside{
     justify-content: center;
     border-radius: 6px;
     background-color: #fff;
-    margin: 0.25%;
+    width: 14rem;
+    margin-right: 0.5rem;
     /*margin-right: 0.5rem;
     width: 12rem;*/
   }
@@ -292,31 +303,31 @@ aside{
     width: 9rem;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 0.25rem;
     /*ellipsis gives the 3 dots*/
   }
   
   .group_name {
-    font-size: 0.8rem;
+    font-size: 0.89rem;
     font-weight: 600;
-    margin-bottom: 0.3rem;
   }
   
   .owner_name{
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: #4a4a4a;
   }
   
   .group_image {
     /*color: #e20074;*/
     margin: 0 0.5rem;
-    height: 1.6rem;
+    height: 1.8rem;
   }
   
   .plus_icon{
     /*border: 5px #e20074;
     border-radius: 5px;*/
     margin: 0 0.5rem;
-    height: 1.6rem;
+    height: 1.5rem;
   }
   
   .plus_icon:hover {
@@ -330,13 +341,14 @@ aside{
     height: 70vh;
   }
   
-  .table-top {
+  .table_top {
     display: flex;
     align-content: center;
     justify-content: space-between;
+    padding: 0.8rem 0 0.8rem 0;
   }
   
-  .title-all-groups{
+  .title_all_groups{
     color: #ea168b;
     font-weight: bold;
     font-size: 0.9rem;;
@@ -345,7 +357,7 @@ aside{
     align-items: center;
   }
   
-  .table-top-right {
+  .table_top_right {
     display: flex;
     align-items: center;
     position: relative;
@@ -381,7 +393,7 @@ aside{
     cursor: pointer;
   }
   
-  .new-group {
+  .new_group_button {
     text-align: center;
     color: #e20074;
     border-radius: 5px;
@@ -391,20 +403,147 @@ aside{
     border: solid 1px #e20074;
   }
   
-  .new-group:hover {
+  .new_group_button:hover {
     color: white;
     background: #e20074;
     transition: ease 0.2s;
   }
 
   .footer {
-    font-size: 0.6rem;
-    text-align: left;
     color: #676767;
     font-size: 0.8rem;
-    font-family: "Roboto", sans-serif;
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-top: 1rem;
+    margin: 0.8rem;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #4a4a4a;
+  }
+  
+  .table-header-row, .table-body-row {
+    vertical-align: baseline;
+    display: flex;
+    align-items: center;
+    padding:10px;
+  }
+  
+  
+  thead, tr, .checkbox {
+    background-color: #f8fafb;;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: solid black;
+  }
+  
+  .checkbox{
+    margin-right: 30px;
+  }
+  
+  tr{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  thead,tbody,tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  th {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  th,td {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  tbody,tr {
+    background-color: #fff;
+  }
+  
+  thead {
+    border-top: solid 1px #e8e9eb;
+  }
+  
+  thead tr:first-child {
+    background-color: #f2f4f8;
+  }
+  
+  tr:not(:last-child) {
+    border-bottom: solid 1px #e8e9eb;
+  }
+  
+  tbody {
+    display: block;
+    height: 30rem;
+    overflow: scroll;
+    border-bottom: solid 1px #e8e9eb;
+    border-top: solid 1px #e8e9eb;
+  }
+  
+  tbody{
+    overflow-x: hidden;
+  }
+  
+  tbody::-webkit-scrollbar {
+    width: 2px; background: #dee3e6; 
+  }
+  tbody::-webkit-scrollbar-thumb {
+    background: #bebebe;
+  
+  }
+  
+  .group-link {
+    color: #e20074;
+    padding-left: 0.4rem;
+    padding-right: 0.2rem;
+    text-decoration: underline;
+  }
+  
+  .imageText {
+    display: inline-flex;
+    align-items: center;
+    padding-top: 2px;
+    text-decoration: underline;
+  }
+  
+  .joinBtn {
+    color: #e20074;
+    height: 1.6rem;
+    width: 5rem;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: solid 1px #ea168b;
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .joinBtn:hover {
+    background: #e20074;
+    color: white;
+    transition: ease 0.2s;
+    cursor: pointer;
+    font-weight: 100;
+  }
+  
+  td:first-child {
+    border-left: none;
+    width: 20em;
+    min-width: 20em;
+    max-width: 20em;
+  }
+  
+  .group-actions {
+    padding-right: 1rem;
+    text-align: right;
   }
