@@ -91,8 +91,8 @@
             <div class="recommended_nav_bar">
                 <span class="recommended_nav_bar_text">RECOMMENDED GROUPS</span>
                 <span class="recommended_nav_icons">
-                    <img src="Assets/prev.svg" alt="err!">
-                    <img src="Assets/next.svg" alt="err!">
+                    <input type="image" src="Assets/prev.svg" alt="err!" />
+                    <input type="image" src="Assets/next.svg" alt="err!" />
                 </span>
             </div>
 
@@ -181,295 +181,303 @@
                     <div class="table_top_right">
                         <i class="bx bx-search"></i>
                         <input type="text" class="search-group" placeholder="Find a group" />
-                        <button class="new_group_button"><span>+ New Group</span></button>
+                        <button class="new_group_button">
+                            <span class="full_text">+ New Group</span>
+                            <span class="short_text">New</span>
+                        </button>
                     </div>
                 </div>
                 <!--start of table. Fixed part-->
-                <div class="table_container">
+
                     <table>
                         <thead>
-                            <tr>
-                                <th class="table-header-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span>GROUP NAME</span>
+                            <tr class="table_header_row">
+                                <th class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
                                 </th>
-                                <th class="group-owner" style="padding-left: 1rem;">GROUP OWNER</th>
-                                <th class="group-create-date" style="padding-left: 1rem;">CREATED ON</th>
-                                <th class="group-actions">ACTIONS</th>
+                                <th class="table_group_name">GROUP NAME</th>
+                                <th class="table_group_owner">GROUP OWNER</th>
+                                <th class="table_create_date">CREATED ON</th>
+                                <th class="table_actions">ACTIONS</th>
                             </tr>
                         </thead>
-
-                        <!--body of table-->
                         <tbody>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText" tyle="width:80px;">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
+                            <tr class="table_body_row">
+                                <td class="checkrow">
+                                    <input type="checkbox" class="checkbox" id="chkbx" />
+                                </td>
+                                <td class="table_group_name">
+                                    <span class="icon_link">
+                                        <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
+                                        <a href="#" class="group_link">ABC Security Groups</a>
                                     </span>
                                 </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
+                                <td class="table_group_owner">
+                                    <span class="icon_link">
+                                        <img src="Assets/person.svg" alt="" class="person_icon" />
+                                        <a href="#" class="owner_link">John Smith</a>
                                     </span>
                                 </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-body-row">
-                                    <input type="checkbox" class="checkbox" />
-                                    <span class="imageText">
-                                        <img src="Assets/group_icon.svg" alt="err!" class="group-icon" />
-                                        <a href="#" class="group-link">ABC Security Groups</a>
-                                    </span>
-                                </td>
-                                <td class="group-owner">
-                                    <span class="imageText">
-                                        <img src="Assets/person.svg" alt="err!" class="person-icon" />
-                                        <a href="#" style="padding:5px;">John Smith</a>
-                                    </span>
-                                </td>
-                                <td class="group-create-date">08/13/2021</td>
-                                <td class="group-actions">
-                                    <button class="joinBtn"><span>+ Join</span></button>
+                                <td class="table_create_date">13/07/2021</td>
+                                <td class="table_actions">
+                                    <button class="join_button"><span>+ Join</span></button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+
 
                 <!--footer-->
                 <div class="footer">
