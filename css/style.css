@@ -119,7 +119,6 @@ aside{
 }
 
 .partition_line {
-    max-width: 280px;
     height: 1px;
     margin: 0.3rem 0;
     border: solid 1px #f2f4f8;
@@ -268,6 +267,16 @@ aside{
     letter-spacing: 1.67px;
 }
 
+.recommended_nav_icon_next, .recommended_nav_icon_prev{
+    border-radius: 2rem;
+    border: solid 1px #e9e9e9;
+}
+
+.recommended_nav_icon_next:hover, .recommended_nav_icon_prev:hover{
+    border: solid 1px #e20074;
+    transition: ease-in-out 0.2s;
+}
+
 .recommended_panel {
     display: flex;
     overflow-x: scroll;
@@ -330,14 +339,16 @@ aside{
   }
   
   .plus_icon{
-    /*border: 5px #e20074;
-    border-radius: 5px;*/
+    border: solid 1px #ffffff;
+    border-radius: 2rem;
     margin: 0 0.5rem;
-    height: 1.5rem;
+    height: 1.7rem;
   }
   
   .plus_icon:hover {
     cursor: pointer;
+    border: solid 1px #e20074;
+    transition: ease-in-out 0.2s;
   }
 
   .table_container_parent {
@@ -375,6 +386,10 @@ aside{
     position: absolute;
     opacity: 0.5;
     padding: 0.4rem;
+}
+
+.bx.bx-search{
+    font-size: 1.1rem;
 }
   
 ::placeholder {
@@ -467,6 +482,10 @@ table td.checkrow, table th.checkrow {
     padding-left: 1rem;
 }
 
+.checkbox:hover{
+    cursor: pointer;
+}
+
 table th.table_group_name {
     width: 30%;
     padding-left: 1rem;
@@ -480,7 +499,7 @@ table td.table_group_name{
 tbody{
     table-layout: fixed;
     height: calc(100vh - 30rem);
-    overflow: scroll;
+    overflow-y: scroll;
     display: block;
     width: 100%;
     overflow-x: hidden;
@@ -560,5 +579,128 @@ tr .table_group_name{
     bottom: 27px;
     float:right;
     letter-spacing: 1px;
+}
+
+@media only screen and (min-width : 1824px) {
+	html, body{
+		font-size: 24px;
+	}
+    header{
+        height: 80px;
+    }
+    .bell_icon{
+        height: 2.7rem;
+    }
+    .profile{
+        height: 2.7rem;
+    }
+    .cloud_image{
+        height: 3rem;
+    }
+    .recommended_nav_icon_prev, .recommended_nav_icon_next{
+        height: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width : 1200px) and (max-width : 1400px){
+    html, body{
+		font-size: 18px;
+	}
+    .recommended_nav_icon_prev, .recommended_nav_icon_next{
+        height: 1.3rem;
+    }
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    table th.table_actions,  table td.table_actions{
+        width:20%;
+    }
+    .table_group_owner{
+        display: none;
+    }
+    table th.table_group_name,  table td.table_group_name{
+        width:45%;
+    }
+}
+
+@media only screen and (min-device-width : 481px) and (max-device-width : 768px) {
+    aside{
+        width:24%;
+    }
+
+    .main_content{
+        width:76%;
+    }
+    .table_create_date, .table_group_owner{
+        display: none;
+    }
+    html, body{
+		font-size: 14px;
+	}
+    .bell_icon{
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    aside{
+        display: none;
+    }
+    .main_content{
+        width:100%;
+    }
+    .table_create_date, .table_group_owner{
+        display: none;
+    }
+    html, body{
+		font-size: 12px;
+	}
+    .bell_icon{
+        display: none;
+    }
+    .table_top{
+        display: block;
+    }
+    .title_all_groups{
+        padding-bottom: 0.2rem;
+    }
+    .table_top_right{
+        justify-content: space-between;
+    }
+    .recommended_nav_icon_next,.recommended_nav_icon_prev{
+        height: 1.1rem;
+    }
+}
+
+@media only screen and (max-device-width : 320px) {
+    aside{
+        display: none;
+    }
+    .main_content{
+        width:100%;
+    }
+    .table_create_date, .table_group_owner{
+        display: none;
+    }
+    html, body{
+		font-size: 12px;
+	}
+    .bell_icon{
+        display: none;
+    }
+    .table_top{
+        display: block;
+    }
+    .title_all_groups{
+        padding-bottom: 0.2rem;
+    }
+    .table_top_right{
+        justify-content: space-between;
+    }
+    .recommended_nav_icon_next,.recommended_nav_icon_prev{
+        height: 1.1rem;
+    }
 }
 
