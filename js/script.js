@@ -16,3 +16,10 @@ function displaySide() {
       checkClass.className = "side_menu_bar";
     }
 }
+
+function selectAll(source) {
+    checkboxes = document.getElementsByClassName("checkbox");
+    for (var t = 0, n = checkboxes.length; t < n; t++) {
+      checkboxes[t].checked = source.checked;
+    }
+  }
