@@ -442,7 +442,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     color: #4a4a4a;
-    height: calc(100vh - 26rem);
+    /*height: calc(100vh - 26rem);*/
     table-layout: fixed;
     text-align: left;
     align-items: center;
@@ -574,17 +574,101 @@ tr .table_group_name{
     margin-right: 0.5rem;
 }
 
-.footer {
-    color: #676767;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: end;
-    margin: 0.8rem;
-    bottom: 27px;
+.sort{
+    cursor: pointer;
     float:right;
-    letter-spacing: 1px;
+    margin-right: 4rem;
+    height: 0.8rem;
+    width: 1.2rem;
+    border-radius: 2px;
 }
 
+.footer{
+    text-align: left;
+    color: #676767;
+    font-size: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  #tableList {
+    flex-direction: row-reverse;
+  }
+  
+  .showing {
+    padding-right: 0.5rem;
+    border-right: 1px solid #979797;
+    transition: all 0.3s ease;
+  }
+  
+  .goto {
+    padding: 0 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .gotoInput {
+    border: solid 1px #979797;
+    background-color: #fff;
+    width: 1.5rem;
+  }
+  
+  .pageNumbers {
+    margin: 0 0.5rem;
+    border-left: 1px solid #979797;
+    transition: all 0.3s ease;
+  }
+  
+  ul {
+    position: relative;
+    display: flex;
+    padding: 0 0.2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul li {
+    list-style: none;
+    margin: 0 0.2rem;
+  }
+  
+  ul li.list {
+    text-align: center;
+  }
+  
+  ul li a {
+    display: block;
+    text-decoration: none;
+  }
+  
+  ul li.list:hover a {
+    color: #e20074;
+  }
+  
+  .active {
+    color: #e20074;
+    font-weight: 600;
+  }
+  
+  .allPageNo {
+    padding: 0 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .pageNumbersBtn {
+    width: 1.2rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/*media queries*/
 @media only screen and (min-width : 1824px) {
 	html, body{
 		font-size: 28px;
@@ -694,7 +778,7 @@ tr .table_group_name{
         width: 18rem;
         height: 100vh;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-      }
+    }
 }
 
 @media only screen and (max-device-width : 320px) {

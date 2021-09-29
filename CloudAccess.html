@@ -181,7 +181,7 @@
                     <div class="title_all_groups">ALL GROUPS</div>
                     <div class="table_top_right">
                         <i class="bx bx-search"></i>
-                        <input type="text" class="search-group" placeholder="Find a group" />
+                        <input id="input_search" onkeyup="SearchDelay()" type="text" class="search-group" placeholder="Find a group" />
                         <button class="new_group_button">
                             <span class="full_text">+ New Group</span>
                             <span class="short_text">New</span>
@@ -190,13 +190,13 @@
                 </div>
                 <!--start of table. Fixed part-->
 
-                    <table>
+                    <table class="table-sortable" id="table-sortable">
                         <thead>
                             <tr class="table_header_row">
                                 <th class="checkrow">
                                     <input type="checkbox" class="checkbox" id="chkbx" onClick="selectAll(this)"/>
                                 </th>
-                                <th class="table_group_name">GROUP NAME</th>
+                                <th class="table_group_name">GROUP NAME <img id="sorting" class="sort" src="Assets/sort_button.svg" alt="err!"></th></th>
                                 <th class="table_group_owner">GROUP OWNER</th>
                                 <th class="table_create_date">CREATED ON</th>
                                 <th class="table_actions">ACTIONS</th>
@@ -231,7 +231,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">CDE Security Groups</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -252,7 +252,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">1HRCare Talent Scout</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -273,7 +273,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">A Team</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -294,7 +294,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">Br HRCare Talent Search</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -315,7 +315,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">Orange Crush</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -336,7 +336,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">Professional group</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -357,7 +357,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">QRST Team</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -378,7 +378,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">RasApp</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -399,7 +399,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">Saturn's rings</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -420,7 +420,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">Simple living</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -441,7 +441,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">Total Reward Group</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -462,7 +462,7 @@
                                 <td class="table_group_name">
                                     <span class="icon_link">
                                         <img src="Assets/group_icon.svg" alt="err!" class="group_icon" />
-                                        <a href="#" class="group_link">ABC Security Groups</a>
+                                        <a href="#" class="group_link">Ultra violet</a>
                                     </span>
                                 </td>
                                 <td class="table_group_owner">
@@ -482,12 +482,21 @@
 
                 <!--footer-->
                 <div class="footer">
-                    <span style="padding-right: 0.5rem; border-right: 1px solid #979797;"> Showing 10-20 </span>
-                    <label for="goto" style="padding: 0 0.5rem;">Goto</label>
-                    <input type="text" style="border: solid 1px #979797; background-color: #fff; width: 1.5rem;" />
-                    <div style="margin: 0 0.5rem; border-left: 1px solid #979797;">
-                        <button style="margin-left: 0.5rem;"><span></span></button>
-                        <span style="padding: 0 0.5rem;">1 2 3 4...10</span>
+                    <span class="showing">
+                        Showing<span id="goto_lower"></span> -
+                        <span id="goto_upper"></span>
+                    </span>
+                    <label for="goto" class="goto">Goto</label>
+                    <input type="text" class="gotoInput" onkeyup="GoToPage(this.value)" />
+                    <div class="pageNumbers">
+                        <ul id="tableList">
+                            <li>
+                                <a href="#" class="prev btn pageNumbersBtn" id="nextId">></a>
+                            </li>
+                            <li>
+                                <a href="#" class="next btn pageNumbersBtn" id="prevId"><</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
