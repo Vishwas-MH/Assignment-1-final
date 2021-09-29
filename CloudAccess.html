@@ -14,6 +14,7 @@
 <body>
     <header>
         <div class="header_left">
+            <i class="fa fa-bars" aria-hidden="true" onclick="displaySide()" id="toggleNavbar"></i>
             <img class="cloud_image" src="Assets/cloud.png" alt="err!">
             <p class="cloud_text">CLOUD&nbsp;</p>
             <p class="access_text"> ACCESS</p>
@@ -30,7 +31,7 @@
     </header>
 
     <section>
-        <aside>
+        <aside id="side_menu" class="side_menu_bar">
             <div class="aside_top">
                 <div class="your_groups">
                     <span class="side_header_text"> YOUR GROUPS/ PACKS</span>
@@ -96,7 +97,7 @@
                 </span>
             </div>
 
-            <div class="recommended_panel">
+            <div class="recommended_panel" id="recommended_panel">
                 <div class="recommended_group">
                     <img class="group_image" src="Assets/group_icon_big.svg" alt="err!" />
                     <div class="recommended_group_data">

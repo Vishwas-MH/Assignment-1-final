@@ -29,6 +29,10 @@ header{
     padding: 1% 2%;
 }
 
+#toggleNavbar {
+    display: none;
+  }
+
 .header_left{
     display: flex;
     align-items: center;
@@ -583,16 +587,16 @@ tr .table_group_name{
 
 @media only screen and (min-width : 1824px) {
 	html, body{
-		font-size: 24px;
+		font-size: 28px;
 	}
     header{
         height: 80px;
     }
     .bell_icon{
-        height: 2.7rem;
+        height: 2.5rem;
     }
     .profile{
-        height: 2.7rem;
+        height: 2.5rem;
     }
     .cloud_image{
         height: 3rem;
@@ -600,12 +604,16 @@ tr .table_group_name{
     .recommended_nav_icon_prev, .recommended_nav_icon_next{
         height: 1.5rem;
     }
-
+    input[type="checkbox"]{
+        width: 23px; /*Desired width*/
+        height: 23px; /*Desired height*/
+    }
+    
 }
 
 @media only screen and (min-width : 1200px) and (max-width : 1400px){
     html, body{
-		font-size: 18px;
+		font-size: 14px;
 	}
     .recommended_nav_icon_prev, .recommended_nav_icon_next{
         height: 1.3rem;
@@ -648,6 +656,9 @@ tr .table_group_name{
     aside{
         display: none;
     }
+    #toggleNavbar{
+        display: block;
+      }
     .main_content{
         width:100%;
     }
@@ -664,7 +675,7 @@ tr .table_group_name{
         display: block;
     }
     .title_all_groups{
-        padding-bottom: 0.2rem;
+        padding-bottom: 1.0rem;
     }
     .table_top_right{
         justify-content: space-between;
@@ -672,12 +683,27 @@ tr .table_group_name{
     .recommended_nav_icon_next,.recommended_nav_icon_prev{
         height: 1.1rem;
     }
+    .search-group {
+        width: 20rem;
+    }
+    .side_menu_barclose {
+        display: block;
+        position: fixed;
+        transform: translate(1%);
+        z-index: 1;
+        width: 18rem;
+        height: 100vh;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+      }
 }
 
 @media only screen and (max-device-width : 320px) {
     aside{
         display: none;
     }
+    #toggleNavbar{
+        display: block;
+      }
     .main_content{
         width:100%;
     }
@@ -694,7 +720,7 @@ tr .table_group_name{
         display: block;
     }
     .title_all_groups{
-        padding-bottom: 0.2rem;
+        padding-bottom: 1.0rem;
     }
     .table_top_right{
         justify-content: space-between;
@@ -702,5 +728,17 @@ tr .table_group_name{
     .recommended_nav_icon_next,.recommended_nav_icon_prev{
         height: 1.1rem;
     }
+    .search-group {
+        width: 20rem;
+    }
+    .side_menu_barclose {
+        display: block;
+        position: fixed;
+        transform: translate(1%);
+        z-index: 1;
+        width: 18rem;
+        height: 100vh;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+      }
 }
 
