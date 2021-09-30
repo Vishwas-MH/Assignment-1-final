@@ -14,6 +14,7 @@ html, body {
     font-family: Franklin Gothic Medium;
     font-size: 13.5px;
     overflow: hidden;
+    
     /*prevents scroll*/
 }
 
@@ -101,6 +102,10 @@ aside{
 
 .aside_top{
     padding: 1.5rem;
+}
+
+.side_menu_bar{
+    transition: all 0.2s ease;
 }
 
 .your_groups{
@@ -235,6 +240,18 @@ aside{
     transition: ease-in-out 0.3s;
 }
 
+.side_menu_barclose {
+    -webkit-transition: width 0.5s;
+    transition: all 1s ease;
+    display: block;
+    position: fixed;
+    transform: translate(1%);
+    z-index: 1;
+    width: 18rem;
+    height: 100vh;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
 .main_content{
     padding: 1rem;
     background-color: #f2f4f8;
@@ -284,6 +301,7 @@ aside{
 .recommended_panel {
     display: flex;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     margin: 0.85rem 0;
     /*justify-content: flex-start;
     align-items: center;
@@ -502,7 +520,7 @@ table td.table_group_name{
 
 tbody{
     table-layout: fixed;
-    height: calc(100vh - 30rem);
+    height: calc(100vh - 29rem);
     overflow-y: scroll;
     display: block;
     width: 100%;
@@ -705,7 +723,7 @@ tr .table_group_name{
 }
 
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+@media only screen and (min-width : 768px) and (max-width : 1024px){
     table th.table_actions,  table td.table_actions{
         width:20%;
     }
@@ -715,15 +733,26 @@ tr .table_group_name{
     table th.table_group_name,  table td.table_group_name{
         width:45%;
     }
+    tbody{
+        height: calc(100vh - 29rem);
+    }
 }
 
-@media only screen and (min-device-width : 481px) and (max-device-width : 768px) {
+@media only screen and (min-width : 481px) and (max-width : 768px) {
     aside{
-        width:24%;
+        width:28%;
     }
-
+    .table_top{
+        display: block;
+    }
+    .title_all_groups{
+        padding-bottom: 1.0rem;
+    }
+    .table_top_right{
+        justify-content: space-between;
+    }
     .main_content{
-        width:76%;
+        width:72%;
     }
     .table_create_date, .table_group_owner{
         display: none;
@@ -734,14 +763,77 @@ tr .table_group_name{
     .bell_icon{
         display: none;
     }
+    .search-group {
+        width: 75%;
+    }
+    tbody{
+        height: calc(100vh - 31rem);
+    }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    aside{
-        display: none;
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .side_menu_bar{
+        width:0%;
+        visibility: hidden;
     }
+
     #toggleNavbar{
         display: block;
+        transition: all 0.3s ease;
+      }
+    .main_content{
+        width:100%;
+    }
+    .table_create_date, .table_group_owner{
+        display: none;
+    }
+    html, body{
+		font-size: 12px;
+	}
+    .bell_icon{
+        display: none;
+    }
+    .table_top{
+        display: block;
+    }
+    .title_all_groups{
+        padding-bottom: 1.0rem;
+    }
+    .table_top_right{
+        justify-content: space-between;
+    }
+    .recommended_nav_icon_next,.recommended_nav_icon_prev{
+        height: 1.1rem;
+    }
+    .search-group {
+        width: 75%;
+    }
+
+    .side_menu_barclose {
+        -webkit-transition: width 0.3s;
+        transition: all 0.5s ease;
+        display: block;
+        position: fixed;
+        transform: translate(1%);
+        z-index: 1;
+        width: 18rem;
+        height: 100vh;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+    tbody{
+        height: calc(100vh - 31rem);
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    .side_menu_bar{
+        width:0%;
+        visibility: hidden;
+    }
+    
+    #toggleNavbar{
+        display: block;
+        transition: all 0.3s ease;
       }
     .main_content{
         width:100%;
@@ -773,56 +865,94 @@ tr .table_group_name{
     .side_menu_barclose {
         display: block;
         position: fixed;
+        transition: all 0.5s ease;
         transform: translate(1%);
         z-index: 1;
         width: 18rem;
         height: 100vh;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+      }
+    tbody{
+        height: calc(100vh - 31rem);
     }
 }
 
-@media only screen and (max-device-width : 320px) {
-    aside{
-        display: none;
-    }
-    #toggleNavbar{
-        display: block;
-      }
-    .main_content{
-        width:100%;
-    }
-    .table_create_date, .table_group_owner{
-        display: none;
-    }
-    html, body{
-		font-size: 12px;
-	}
-    .bell_icon{
-        display: none;
-    }
-    .table_top{
-        display: block;
-    }
-    .title_all_groups{
-        padding-bottom: 1.0rem;
-    }
-    .table_top_right{
-        justify-content: space-between;
-    }
-    .recommended_nav_icon_next,.recommended_nav_icon_prev{
-        height: 1.1rem;
-    }
-    .search-group {
-        width: 20rem;
+@media only screen and (max-width: 770px) and (orientation: landscape) {
+    section {
+      margin-left: 0.1%;
     }
     .side_menu_barclose {
-        display: block;
-        position: fixed;
-        transform: translate(1%);
-        z-index: 1;
-        width: 18rem;
-        height: 100vh;
-        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-      }
-}
+      transform: translate(1%);
+      z-index: 1;
+      width: 14rem;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+    #toggleNavbar {
+      display: block;
+      transition: all 0.3s ease;
+    }
+    header {
+      z-index: 10;
+    }
+    aside {
+      z-index: 7;
+      box-shadow: 0 1px 4px 0 rgb(37 37 37 / 10%);
+      transition: all 0.3s ease;
+      height: calc(100vh - 3rem);
+      overflow: auto;
+    }
+    .aside_bottom{
+      margin-bottom: 1.5rem;
+    }
+    .fa-bars{
+        display: none;
+    }
+    .table_create_date, .table_group_owner {
+      display: revert;
+    }
+  }
 
+  @media only screen and (max-width: 694px) and (orientation: landscape){
+    .main_header_text, .partition_line_big, .recommended_nav_bar, .title_all_groups, .recommended_panel{
+        display: none;
+    }
+    .table_group_owner{
+        width: 30%;
+    }
+    .table_create_date{
+      display: none;
+    }
+
+    .table_container_parent{
+        height: 100%;
+    }
+    .table-sortable{
+        height: calc(100% - 6rem);
+    }
+    tbody{
+        height: calc(100% - 4rem);
+    }
+    .fa-bars{
+        visibility: hidden;
+    }
+    }
+  @media only screen and (max-width: 543px) and (orientation: landscape){
+    .table_group_owner{
+      display: none;
+    }
+    .fa-bars{
+        visibility: revert;
+    }
+  }
+  @media only screen and (max-width: 644px) and (orientation: landscape){
+    .table_group_owner{
+      display: none;
+    }
+    .navbarclose {
+      display: block;
+      transform: translate(1%);
+      z-index: 1;
+      width: 14rem;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
