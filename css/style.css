@@ -104,9 +104,6 @@ aside{
     padding: 1.5rem;
 }
 
-.side_menu_bar{
-    transition: all 0.2s ease;
-}
 
 .your_groups{
     display: flex;
@@ -241,7 +238,7 @@ aside{
 }
 
 .side_menu_barclose {
-    -webkit-transition: width 0.5s;
+    -webkit-transition: width 1s;
     transition: all 1s ease;
     display: block;
     position: fixed;
@@ -250,6 +247,13 @@ aside{
     width: 18rem;
     height: 100vh;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.side_subtextclose{
+    -webkit-transition: width 1s;
+    transition: all 1s ease;
+    color: #000000;
+    opacity: 40%;
 }
 
 .main_content{
@@ -629,9 +633,11 @@ tr .table_group_name{
   }
   
   .gotoInput {
-    border: solid 1px #979797;
     background-color: #fff;
     width: 1.5rem;
+    height: 1.2rem;
+    border: 2px solid #979797;
+    font-size: 1rem;
   }
   
   .pageNumbers {
@@ -687,7 +693,24 @@ tr .table_group_name{
   }
 
 /*media queries*/
-@media only screen and (min-width : 1824px) {
+@media only screen and (min-width : 2480px){
+	html, body{
+		font-size: 32px;
+	}
+    header{
+        height: 110px;
+    }
+    input[type="checkbox"]{
+        width: 26px; /*Desired width*/
+        height: 26px; /*Desired height*/
+    }
+    .recommended_nav_icon_prev, .recommended_nav_icon_next{
+        height: 1.5rem;
+    }
+}
+
+
+@media only screen and (min-width : 1824px) and (max-width : 2480px){
 	html, body{
 		font-size: 28px;
 	}
@@ -713,12 +736,41 @@ tr .table_group_name{
     
 }
 
-@media only screen and (min-width : 1200px) and (max-width : 1400px){
+@media only screen and (min-width : 1440px) and (max-width : 1824px) {
+	html, body{
+		font-size: 16px;
+	}
+    header{
+        height: 60px;
+    }
+    .bell_icon{
+        height: 2.3rem;
+    }
+    .profile{
+        height: 2.3rem;
+    }
+    .cloud_image{
+        height: 2.7rem;
+    }
+    .recommended_nav_icon_prev, .recommended_nav_icon_next{
+        height: 1.3rem;
+    }
+    input[type="checkbox"]{
+        width: 20px; /*Desired width*/
+        height: 20px; /*Desired height*/
+    }
+    
+}
+
+@media only screen and (min-width : 1200px) and (max-width : 1440px){
     html, body{
 		font-size: 14px;
 	}
     .recommended_nav_icon_prev, .recommended_nav_icon_next{
         height: 1.3rem;
+    }
+    .side_subtext{
+        visibility: unset;
     }
 }
 
@@ -736,11 +788,20 @@ tr .table_group_name{
     tbody{
         height: calc(100vh - 29rem);
     }
+    .side_subtext{
+        visibility: unset;
+    }
+    .fa-bars{
+        display: none;
+    }
 }
 
 @media only screen and (min-width : 481px) and (max-width : 768px) {
     aside{
         width:28%;
+    }
+    .fa-bars{
+        display: none;
     }
     .table_top{
         display: block;
@@ -769,6 +830,9 @@ tr .table_group_name{
     tbody{
         height: calc(100vh - 31rem);
     }
+    .side_subtext{
+        visibility: unset;
+    }
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
@@ -776,11 +840,13 @@ tr .table_group_name{
         width:0%;
         visibility: hidden;
     }
-
+    .side_subtext{
+        visibility: hidden;
+    }
     #toggleNavbar{
         display: block;
         transition: all 0.3s ease;
-      }
+    }
     .main_content{
         width:100%;
     }
@@ -828,6 +894,9 @@ tr .table_group_name{
 @media only screen and (max-width : 320px) {
     .side_menu_bar{
         width:0%;
+        visibility: hidden;
+    }
+    .side_subtext{
         visibility: hidden;
     }
     
