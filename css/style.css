@@ -30,9 +30,9 @@ header{
     padding: 1% 2%;
 }
 
-#toggleNavbar {
+#hamburgerBtn {
     display: none;
-  }
+}
 
 .header_left{
     display: flex;
@@ -91,12 +91,16 @@ section{
     display: flex;
 }
 
-aside{
+#side_menu{
     width: 18%;
     background-color: #ffff;
     box-shadow: 0 1px 4px 0 #dfe3e7;
     letter-spacing: 0.5px;
-    
+    z-index:1;
+    transition: all 0.5s ease;
+    height: calc(100% - 55px);
+    position: relative;
+    display: block;
     /*padding: 2%;*/
 }
 
@@ -791,16 +795,16 @@ tr .table_group_name{
     .side_subtext{
         visibility: unset;
     }
-    .fa-bars{
+    #hamburgerBtn{
         display: none;
     }
 }
 
 @media only screen and (min-width : 481px) and (max-width : 768px) {
-    aside{
-        width:28%;
+    #side_menu{
+        width:27%
     }
-    .fa-bars{
+    #hamburgerBtn{
         display: none;
     }
     .table_top{
@@ -836,19 +840,26 @@ tr .table_group_name{
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
-    .side_menu_bar{
-        width:0%;
-        visibility: hidden;
+    body{
+        margin-left: 0;
     }
-    .side_subtext{
-        visibility: hidden;
+    #side_menu {
+        width: 50vw;
+        position: fixed;
+        transform: translateX(-1000px);
+        transition: 1000ms transform;
     }
-    #toggleNavbar{
+    #side_menu.open {
+        transform: translateX(0);
+        transition: 1000ms transform;
+    }
+    #hamburgerBtn{
         display: block;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;;
     }
     .main_content{
         width:100%;
+        margin-left: 0;
     }
     .table_create_date, .table_group_owner{
         display: none;
@@ -874,36 +885,26 @@ tr .table_group_name{
     .search-group {
         width: 75%;
     }
-
-    .side_menu_barclose {
-        -webkit-transition: width 0.3s;
-        transition: all 0.5s ease;
-        display: block;
-        position: fixed;
-        transform: translate(1%);
-        z-index: 1;
-        width: 18rem;
-        height: 100vh;
-        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-    }
     tbody{
         height: calc(100vh - 31rem);
     }
 }
 
-@media only screen and (max-width : 320px) {
-    .side_menu_bar{
-        width:0%;
-        visibility: hidden;
+@media only screen and (min-width:20px) and (max-width : 320px) {
+    #side_menu {
+        width: 50vw;
+        position: fixed;
+        transform: translateX(-1000px);
+        transition: 1000ms transform;
     }
-    .side_subtext{
-        visibility: hidden;
+    #side_menu.open {
+        transform: translateX(0);
+        transition: 1000ms transform;
     }
-    
-    #toggleNavbar{
+    #hamburgerBtn{
         display: block;
         transition: all 0.3s ease;
-      }
+    }
     .main_content{
         width:100%;
     }
@@ -931,50 +932,27 @@ tr .table_group_name{
     .search-group {
         width: 20rem;
     }
-    .side_menu_barclose {
-        display: block;
-        position: fixed;
-        transition: all 0.5s ease;
-        transform: translate(1%);
-        z-index: 1;
-        width: 18rem;
-        height: 100vh;
-        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-      }
     tbody{
         height: calc(100vh - 31rem);
     }
 }
 
 @media only screen and (max-width: 770px) and (orientation: landscape) {
-    section {
+    section, .side_menu_bar {
       margin-left: 0.1%;
     }
-    .side_menu_barclose {
-      transform: translate(1%);
-      z-index: 1;
-      width: 14rem;
-      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-    }
-    #toggleNavbar {
+    #hamburgerBtn {
       display: block;
       transition: all 0.3s ease;
     }
     header {
       z-index: 10;
     }
-    aside {
-      z-index: 7;
-      box-shadow: 0 1px 4px 0 rgb(37 37 37 / 10%);
-      transition: all 0.3s ease;
-      height: calc(100vh - 3rem);
-      overflow: auto;
-    }
     .aside_bottom{
       margin-bottom: 1.5rem;
     }
-    .fa-bars{
-        display: none;
+    #hamburgerBtn{
+        display: block;
     }
     .table_create_date, .table_group_owner {
       display: revert;
@@ -1001,7 +979,7 @@ tr .table_group_name{
     tbody{
         height: calc(100% - 4rem);
     }
-    .fa-bars{
+    #hamburgerBtn{
         visibility: hidden;
     }
     }
@@ -1009,7 +987,7 @@ tr .table_group_name{
     .table_group_owner{
       display: none;
     }
-    .fa-bars{
+    #hamburgerBtn{
         visibility: revert;
     }
   }
@@ -1017,11 +995,14 @@ tr .table_group_name{
     .table_group_owner{
       display: none;
     }
-    .navbarclose {
-      display: block;
-      transform: translate(1%);
-      z-index: 1;
-      width: 14rem;
-      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    #side_menu {
+        width: 50vw;
+        position: fixed;
+        transform: translateX(-1000px);
+        transition: 1000ms transform;
+    }
+    #side_menu.open {
+        transform: translateX(0);
+        transition: 1000ms transform;
     }
   }

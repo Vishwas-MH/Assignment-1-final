@@ -8,20 +8,13 @@ scrolltoLeft.onclick = function () {
     document.getElementById("recommended_panel").scrollLeft += 100;
 };
 
-function displaySide() {
-    let checkClass = document.getElementById("side_menu");
-    let textClass = document.getElementById("side_text");
-    let textClass2 = document.getElementById("side_text2");
-    if (checkClass.className === "side_menu_bar") {
-        checkClass.className += "close";
-        textClass.className += "close";
-        textClass2.className += "close";
-    } else {
-        checkClass.className = "side_menu_bar";
-        textClass.className = "side_subtext";
-        textClass2.className = "side_subtext";
-    }
-}
+
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+
+hamburgerBtn.addEventListener('click', () => {
+    side_menu.classList.toggle('open');
+})
+
 
 function selectAll(source) {
     checkboxes = document.getElementsByClassName("checkbox");
