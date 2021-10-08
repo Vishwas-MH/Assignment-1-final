@@ -98,7 +98,7 @@ section{
     letter-spacing: 0.5px;
     z-index:1;
     transition: all 0.5s ease;
-    height: calc(100% - 55px);
+    height: 100%;
     position: relative;
     display: block;
     /*padding: 2%;*/
@@ -676,10 +676,6 @@ tr .table_group_name{
     color: #e20074;
   }
   
-  .active {
-    color: #e20074;
-    font-weight: 600;
-  }
   
   .allPageNo {
     padding: 0 0.5rem;
@@ -694,6 +690,11 @@ tr .table_group_name{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .activepage{
+      color: #e20074;
+      font-weight: 600;
   }
 
 /*media queries*/
@@ -847,11 +848,11 @@ tr .table_group_name{
         width: 50vw;
         position: fixed;
         transform: translateX(-1000px);
-        transition: 1000ms transform;
+        transition: 500ms transform;
     }
     #side_menu.open {
         transform: translateX(0);
-        transition: 1000ms transform;
+        transition: 500ms transform;
     }
     #hamburgerBtn{
         display: block;
@@ -895,11 +896,11 @@ tr .table_group_name{
         width: 50vw;
         position: fixed;
         transform: translateX(-1000px);
-        transition: 1000ms transform;
+        transition: 500ms transform;
     }
     #side_menu.open {
         transform: translateX(0);
-        transition: 1000ms transform;
+        transition: 500ms transform;
     }
     #hamburgerBtn{
         display: block;
@@ -999,10 +1000,10 @@ tr .table_group_name{
         width: 50vw;
         position: fixed;
         transform: translateX(-1000px);
-        transition: 1000ms transform;
+        transition: 500ms transform;
     }
     #side_menu.open {
         transform: translateX(0);
-        transition: 1000ms transform;
+        transition: 500ms transform;
     }
   }

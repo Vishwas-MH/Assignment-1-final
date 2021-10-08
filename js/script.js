@@ -125,7 +125,6 @@ function buttonGereration(limit) {
         var updateflagpage = 0;
         for (let i = 1; i <= nofPage; i++) {
 
-
             let li = document.createElement("li");
             li.className = "list";
             let a = document.createElement("a");
@@ -142,6 +141,11 @@ function buttonGereration(limit) {
             ul.insertBefore(li, document.getElementById("tableList").childNodes[3]);
 
             a.onclick = (e) => {
+                let inactives = document.getElementsByClassName("activepage");
+                for (var i = 0; i < inactives.length; i++) {
+                    inactives[i].classList.remove('activepage');
+                }
+                a.setAttribute("class", "activepage");
                 let x = e.target.getAttribute("data-page");
                 updatepage(x);
                 tableBody.innerHTML = "";
@@ -161,13 +165,11 @@ function buttonGereration(limit) {
     function nextElement() {
         if (this.id == "nextId") {
             flag = 1;
-            console.log(z);
             z == arrayTr.length - limit ? (z = 0) : z / limit + 1 == nofPage ? z : (z += limit);
         }
 
         if (this.id == "prevId") {
             flag = 1;
-            console.log(z);
             z == 0 ? arrayTr.length - limit : (z -= limit);
         }
         updatepage(z / limit + 1);
@@ -199,7 +201,7 @@ function onChangeGoToPage(go) {
         var goto = go - 1;
         updatepage(go);
         if (nofPage < goto) {
-            console.log("invalid go to");
+            window.alert("invalid go to");
             return;
         }
         let offset = (goto * limit);
